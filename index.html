@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>intro stuff</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+    <title>Questionnaire</title>
 </head>
 <body>
     <h1>The beginning</h1>
+
+    <div>
+        <div>
+            <embed src="https://www.google.ca/" class="embed-web">
+        </div>
+        <form action="form.js" method="POST" name="form_opinion">
+            <label for="opinion"> What is your first opinion?</label>
+            <input type="text" id="opinion" name="opinion" class="text-box"><br/>
+            <div id="radio">
+                <h4>Are you</h4>
+                <label for="radio">Select one:</label>
+                <input type="radio" id="radio" value="radio">
+            </div>
+        </form>
+    </div>
 </body>
-</html>
+</html> 

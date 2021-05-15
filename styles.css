@@ -1,9 +1,37 @@
-.text-box{
-    width: 40%;
-    height: 50px;
+body {
+	background-color: #19ceeb;
+}
+.container {
+	display: flex;
+	flex-direction: row-reverse;
+	/* border: 10px solid orange; */
+	height: auto;
+	font-weight: bold;
+	margin: 8% auto;
+	background-color: white;
 }
 
-.embed-web{
-    width: 500px;
-    height: 300px;
+.item-form {
+	position: relative;
+	height: auto;
+	width: 50%;
+	text-align: center;
+}
+
+.airbnb-container {
+	position: relative;
+	width: 80%;
+}
+
+.airbnb-pic {
+	width: 100%; /*this uses the width of all the available space of the container */
+}
+
+.question {
+	margin-bottom: 30px;
+}
+
+textarea {
+	width: 50%;
+	height: auto;
 }

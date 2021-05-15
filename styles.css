@@ -7,7 +7,7 @@ body {
 	/* border: 10px solid orange; */
 	height: auto;
 	font-weight: bold;
-	margin: 8% auto;
+	margin: 5% auto;
 	background-color: white;
 }
 
@@ -34,4 +34,8 @@ body {
 textarea {
 	width: 50%;
 	height: auto;
+}
+
+#btn-submit{
+	margin-bottom: 20px;
 }

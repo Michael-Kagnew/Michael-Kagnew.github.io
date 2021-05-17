@@ -21,30 +21,44 @@
                     <p>The link to the Airbnb home page can be found <a  href="https://www.airbnb.ca/" target="_blank">here.</a></p>
                 </div>
                 <hr/>
-                <div class="question" id="impression">
+                <div class="question-area" id="impression">
                     <p class="section-title"> First Impression</p>
                     <label for="opinion"> What is your initial impression of the site?</label>
                     <input type="text" id="opinion" name="opinion" class="text-box">
                 </div>
-                <div class="question" >
+                <div class="question-area" >
                     <p class="section-title">Which of the following words describe this site from the image you see:</p>
-                    <label for="inviting">Inviting</label>
-                    <input type="checkbox" id="inviting" value="inviting" name="description"><br />
-                    <label for="elegant">Elegant</label>
-                    <input type="checkbox" id="elegant" value="elegant" name="description"><br />
-                    <label for="consistent">Consistent</label>
-                    <input type="checkbox" id="consistent" value="consistent" name="description">
+                    <div>
+                       <div class="choice"> 
+                            <input type="checkbox" id="inviting" value="inviting" name="description">
+                            <label for="inviting">Inviting</label>
+                        </div><br />
+                        <div class="choice">
+                            <input type="checkbox" id="elegant" value="elegant" name="description">
+                            <label for="elegant">Elegant</label>
+                        </div><br />
+                        <div class="choice">
+                            <input type="checkbox" id="consistent" value="consistent" name="description">
+                            <label for="consistent">Consistent</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="question">
+                <div class="question-area">
                     <p class="section-title"> After visting the site, which of the following describes the usability of the site:</p>
-                    <label for="best">The site is intuitive and I know where I need everything.</label>
-                    <input type="radio" id="best" value="best" name="usability"><br />
-                    <label for="medium">The site is mostly intuitive but is missing some things.</label>
-                    <input type="radio" id="medium" value="medium" name="usability"><br />
-                    <label for="worst">I have a hard time knowing where to locate certain features.</label>
-                    <input type="radio" id="worst" value="worst" name="usability">
+                   <div>
+                        <div class="choice">
+                            <input type="radio" id="best" value="best" name="usability">
+                            <label for="best">The site is intuitive and I know where I need everything.</label></div>
+                        <br />
+                        <div class="choice">
+                            <input type="radio" id="medium" value="medium" name="usability">
+                            <label for="medium">The site is mostly intuitive but is missing some things.</label></div>
+                        <br />
+                        <div class="choice"><input type="radio" id="worst" value="worst" name="usability">
+                        <label for="worst">I have a hard time knowing where to locate certain features.</label></div>
+                    </div>
                 </div>
-                <div class="question">
+                <div class="question-area">
                     <p class="section-title">From a scale of 1-5, what would you give the overall asethetic of the site?</p>
                     <select>
                         <option value="1">1 star</option>
@@ -54,12 +68,12 @@
                         <option value="5">5 star</option>
                     </select>
                 </div>
-                <div class="question">
+                <div class="question-area">
                     <p class="section-title">If you have any additional comments, please write them below.</p>
                     <textarea rows="4">
                     </textarea>
                 </div>
-                <button type="submit" id="btn-submit">Submit the Questionnaire</button>
+                    <button type="submit" id="btn-submit">Submit the Questionnaire</button>
             </form>
         </div>
     </div>

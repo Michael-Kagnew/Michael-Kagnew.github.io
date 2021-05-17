@@ -2,10 +2,14 @@ body {
 	background: linear-gradient(0deg, rgba(82,253,255,1) 0%, rgba(207,255,126,1) 100%);
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+.title{
+	text-align: center;
+}
+
 .container {
 	display: flex;
 	flex-direction: row-reverse;
-	/* border: 10px solid orange; */
 	height: auto;
 	font-weight: bold;
 	margin: 5% auto;
@@ -16,23 +20,16 @@ body {
 	position: relative;
 	height: auto;
 	width: 50%;
-	text-align: center;
 }
 
 .airbnb-container {
 	position: relative;
 	width: 80%;
+
 }
 
 .airbnb-pic {
 	width: 100%; /*this uses the width of all the available space of the container */
-}
-
-.question {
-	/* margin-bottom: 30px; */
-	padding: 10px;
-	font-size: large;
-	/* border: 1px solid black; */
 }
 
 textarea {
@@ -42,11 +39,25 @@ textarea {
 
 #btn-submit{
 	margin-bottom: 20px;
+	margin-top: 20px;
+	display: flex;
+	margin-left: auto ;
+	margin-right: auto;
 }
 
 .section-title{
 	font-size: x-large;
+	text-align: center;
 }
+
+.question-area{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
 
 
 

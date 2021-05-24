@@ -7,7 +7,7 @@
 </head>
 
 <body>
-
+<h1 id="shopName">Finesse Grocery Shop</h1>
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
   <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
@@ -18,7 +18,7 @@
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
-  <p>Tell us a bit about you.</p>
+  <p id='lineUp'>Tell us a bit about you.</p>
   <div class="dieteryOptions">
         <div class="dietList">
             Choose a Category:
@@ -47,7 +47,7 @@
 </div>
 
 <div id="Products" class="tabcontent">
-  <h3>Your targeted products</h3>
+  <h3>Your Targeted Products</h3>
   <p>We preselected products based on your restrictions.</p>
 	 Choose items to buy:
 	 <div id="displayProduct"></div>
@@ -62,7 +62,7 @@
   <div id="displayCart"></div>
 </div>
 
-<footer> Designed by Finesse</footer>
+<!-- <footer> Designed by Finesse</footer> -->
 
 <script src="scripts/groceries.js"></script>
 <script src="scripts/main.js"></script>

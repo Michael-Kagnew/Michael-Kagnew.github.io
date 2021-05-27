@@ -27,19 +27,24 @@ function openInfo(evt, tabName) {
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
-function populateListProductChoices(slct1, slct2, organicSelect, orderSelect) {
-    var s1 = document.getElementById(slct1);
+function populateListProductChoices(restrictionName,slct2, organicSelect, orderSelect) {
+    // var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
 	var s3 = document.getElementById(organicSelect);
 	var s4 = document.getElementById(orderSelect);
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
-		
-	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.value, s3.value);
-	 _priceSortOrder(optionArray, s4.value);
+	
+	
+	//Obtain the checked/unchecked boxes
+	var restrictions = _mainRestriction(restrictionName);
+	console.log(restrictions);
 
+
+	// obtain a reduced list of products based on restrictions
+    var optionArray = restrictListProducts(products, restrictions, s3.value);
+	 _priceSortOrder(optionArray, s4.value);
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
 	// <label for="Bread">Bread/label><br>
@@ -66,6 +71,19 @@ function populateListProductChoices(slct1, slct2, organicSelect, orderSelect) {
 	}
 }
 
+function _mainRestriction(restrictionName){
+	let categoryElement = document.getElementsByName(restrictionName);
+
+	let obj = {}
+
+	for(let child of categoryElement){
+		obj[child.value] = child.checked;
+	}
+	return obj;
+	
+}
+
+//Check the sort selection on the Client tab
 function _priceSortOrder(prods, order){
 	//  var displayedProducts = document.getElementById(prodId);
 	// var list = document.querySelector('#' + prodId);
@@ -78,6 +96,9 @@ function _priceSortOrder(prods, order){
 		 prods.sort((item1, item2) => (item1.price > item2.price ? -1 : (item1.price == item2.price) ? ((item1.name > item2.name) ? -1 : 1) : 1 ));
 	}
 }
+
+//Will auto pull the checkboxes and check what is selected and not
+
 	
 // This function is called when the "Add selected items to cart" button in clicked
 // The purpose is to build the HTML to be displayed (a Paragraph) 

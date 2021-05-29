@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Finesse Grocery Shopping</title>
+</head>
+
+<body>
+<h1 id="shopName">Finesse Grocery Shop</h1>
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p id='lineUp'>Tell us a bit about you.</p>
+  <div class="dieteryOptions">
+        <div class="dietList" id="Category">
+            Choose a Category: </br>
+            <!-- <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', 'organicSelect', 'priceOrder')">
+                <option value=""></option>
+                <option value="nut-free">Nut Free</option>
+                <option value="lactose-free">Lactose Free</option>
+                <option value="None">None</option>
+            </select> -->
+          <input type="checkbox" value="nut-free" id="nut" name="restriction" onclick="populateListProductChoices(this.name,'displayProduct', 'organicSelect', 'priceOrder')">
+          <label for="nut">Nut Free</label><br/>
+          <input type="checkbox" value="lactose-free" id="lactose" name="restriction" onclick="populateListProductChoices(this.name,'displayProduct', 'organicSelect', 'priceOrder')">
+          <label for="lactose">Lactose Free</label> <br/>
+          <input type="checkbox" value="none" id="none" name="restriction" onclick="populateListProductChoices(this.name,'displayProduct', 'organicSelect', 'priceOrder')">
+          <label for="none">None</label> 
+        </div>
+        <div class="dietList">
+            Choose if you prefer organic food or not:
+            <select id="organicSelect" name="organicSelect" onchange="populateListProductChoices('restriction', 'displayProduct', this.id, 'priceOrder')">
+                <option value="false">Don't mind</option>
+                <option value="true">I prefer organic</option>
+            </select>
+        </div>
+        <div class="dietList">
+          Choose your price ordering:
+          <select id="priceOrder" name="priceOrder"  onchange="populateListProductChoices('restriction', 'displayProduct', 'organicSelect', this.id)">
+            <option value="asc">Ascending</option>
+            <option value="dsc">Descending</option>
+          </select>
+        </div>
+    </div>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your Targeted Products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	 Choose items to buy:
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+</div>
+
+<!-- <footer> Designed by Finesse</footer> -->
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>

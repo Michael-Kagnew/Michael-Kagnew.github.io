@@ -85,11 +85,11 @@ function restrictListProducts(prods, restriction, organic) {
 
 
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction["nut-free"] == true) && (prods[i].nut == false)){
+		if ((restriction["nut-free"] == true && restriction["lactose-free"] == false) && (prods[i].nut == false)){
 			_organicCheck(prods[i],organic);
 		}
 
-		else if ((restriction["lactose-free"] == true) && (prods[i].lactose == false)){
+		else if ((restriction["lactose-free"] == true && restriction["nut-free"] == false) && (prods[i].lactose == false)){
 			_organicCheck(prods[i],organic);
 		}
 

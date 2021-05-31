@@ -7,6 +7,9 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /* Style the tab */
@@ -75,8 +78,11 @@ body{
 }
 
 footer {
-  position: absolute;
+  /* position: static;
   bottom: 0px;
+  margin-bottom: auto; */
+  flex-shrink: 0;
+
 }
 
 .tabcontent h3 {
@@ -117,3 +123,49 @@ select {
   padding: 10px 15px;
   border: none;
 }
+
+.itemCard{
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: auto;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.itemCard:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+
+.itemCard img {
+  border: 0.5px solid black;
+  border-radius: 10px;
+}
+
+#displayProduct{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.cool-button, .cool-button:link, .cool-button:visited {
+  padding: 13px 0;
+  border: 1px solid #333;
+  color: #333;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 13px;
+  transition: all .2s ease-in-out;
+}
+
+.cool-button:hover {
+  background: #333;
+  border: 1px solid #333;
+  color: #fefefe;
+  border-radius: 30px;
+}
+
+

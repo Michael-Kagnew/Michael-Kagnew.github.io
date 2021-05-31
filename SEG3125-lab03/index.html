@@ -15,6 +15,8 @@
   <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
   <button class="tablinks" onclick="openInfo(event, 'Delivery')">Delivery</button>
   <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+  <button class="tablinks" onclick="openInfo(event, 'COVID-19 Plan')">COVID-19 Plan</button>
+
 </div>
 
 <div id="main">
@@ -25,10 +27,10 @@
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
-  <p id='lineUp'>Tell us a bit about you.</p>
+  <p id='lineUp'>Tell us a bit about your diet needs.</p>
   <div class="dieteryOptions">
         <div class="dietList" id="Category">
-            Choose a Category: </br>
+            Choose a dietary category: </br>
           <input type="checkbox" value="nut-free" id="nut" name="restriction" onclick="populateListProductChoices(this.name,'displayProduct', 'organicSelect', 'priceOrder')">
           <label for="nut">Nut Free</label><br/>
           <input type="checkbox" value="lactose-free" id="lactose" name="restriction" onclick="populateListProductChoices(this.name,'displayProduct', 'organicSelect', 'priceOrder')">
@@ -37,11 +39,8 @@
           <label for="none">None</label> 
         </div>
         <div class="dietList">
-            Choose if you prefer organic food or not:
-            <select id="organicSelect" name="organicSelect" onchange="populateListProductChoices('restriction', 'displayProduct', this.id, 'priceOrder')">
-                <option value="false">Don't mind</option>
-                <option value="true">I prefer organic</option>
-            </select>
+          <label for="organicSelect">Do you prefer organic food</label>
+            <input type="checkbox" id="organicSelect" name="restriction" onclick="populateListProductChoices(this.name, 'displayProduct', 'organicSelect', this.id)">
         </div>
         <div class="dietList">
           Choose your price ordering:
@@ -55,24 +54,28 @@
 
 <div id="Products" class="tabcontent">
   <h3>Your Targeted Products</h3>
-  <p>We preselected products based on your restrictions.</p>
+  <p>We preselected products based on your dietary restrictions.</p>
 	 Choose items to buy:
 	 <div id="displayProduct"></div>
-	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+	 <button id="addCart" type="button" class="block cool-button" onclick="selectedItems()">
 		Add selected items to cart.
 	</button>
 </div>
 
 <div id="Cart" class="tabcontent">
   <h3>Cart</h3>
-  <p>Here is your cart.</p>
+  <p>Here are the products in your cart currently.</p>
   <div id="displayCart"></div>
 </div>
 
-<!-- <footer> Designed by Finesse</footer> -->
 
+<div>
+  <footer> Designed by Finesse</footer>
+</div>
 <script src="scripts/groceries.js"></script>
 <script src="scripts/main.js"></script>
 
 </body>
+
+
 </html>

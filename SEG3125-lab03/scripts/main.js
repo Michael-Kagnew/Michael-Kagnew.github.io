@@ -35,15 +35,13 @@ function populateListProductChoices(restrictionName,slct2, organicSelect, orderS
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
-	
+	s2.id = "displayProduct";
 	
 	//Obtain the checked/unchecked boxes
 	var restrictions = _mainRestriction(restrictionName);
-	console.log(restrictions);
-
 
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, restrictions, s3.value);
+    var optionArray = restrictListProducts(products, restrictions, s3);
 	 _priceSortOrder(optionArray, s4.value);
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
@@ -53,21 +51,35 @@ function populateListProductChoices(restrictionName,slct2, organicSelect, orderS
 			
 		var productName = optionArray[i].name;
 		var productPrice = optionArray[i].price;
+		var photo = optionArray[i].pic;
+
+		//Create the card with the photo
+		var itemContainer = document.createElement("div");
+		itemContainer.className += "itemCard";
+		var image = document.createElement("img");
+		image.src = photo;
+		itemContainer.appendChild(image);
+
+
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
-		s2.appendChild(checkbox);
+		itemContainer.appendChild(document.createElement("br"));
+		itemContainer.appendChild(checkbox);
 		
-		// create a label for the checkbox, and also add in HTML DOM
+		// create a label for the checkbox, also add it to the item container
 		var label = document.createElement('label')
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName + " $" + productPrice));
-		s2.appendChild(label);
+		itemContainer.appendChild(label);
+
+		//append the item container to the html element that will contain all the other item containers
+		s2.appendChild(itemContainer);
 		
 		// create a breakline node and add in HTML DOM
-		s2.appendChild(document.createElement("br"));    
+		//s2.appendChild(document.createElement("br"));    
 	}
 }
 
@@ -126,7 +138,7 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Total Price is " + Math.round(getTotalPrice(chosenProducts))));
 		
 }
 

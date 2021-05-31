@@ -8,70 +8,80 @@ var products = [
 		nut: true,
 		lactose: true,
 		organic: false,
-		price: 1.99
+		price: 1.99,
+		pic: "../images/cookies.jpg"
 	},
 	{
 		name: "bread",
 		nut: false,
 		lactose: false,
 		organic: false,
-		price: 2.35
+		price: 2.35,
+		pic: "../images/bread.jpg"
 	},
 	{
 		name: "cheese",
 		nut: false,
 		lactose: true,
 		organic: true,
-		price: 9.00
+		price: 9.00,
+		pic: "../images/cheese.jpg"
 	},
 	{
 		name: "orange",
 		nut: false,
 		lactose: false,
 		organic: true,
-		price: 5.51
+		price: 5.51,
+		pic: "../images/orange.jpg"
 	},
 	{
 		name: "crackers",
 		nut: false,
 		lactose: false,
 		organic: false,
-		price: 13.25
+		price: 13.25,
+		pic: "../images/crackers.jpg"
 	},
 	{
 		name: "blueberry",
 		nut: false,
 		lactose: false,
 		organic: true,
-		price: 1.00
+		price: 1.00,
+		pic: "../images/blueberries.jpg"
 	},
 	{
 		name: "cake",
 		nut: true,
 		lactose: true,
 		organic: false,
-		price: 34.01
+		price: 34.01,
+		pic: "../images/cake.jpg"
 	},
 	{
 		name: "trail mix",
 		nut: true,
 		lactose: false,
 		organic: true,
-		price: 5.55
+		price: 5.55,
+		pic: "../images/trailmix.jpg"
 	},
 	{
 		name: "beef jerky",
 		nut: false,
 		lactose: false,
 		organic: false,
-		price: 19.79
+		price: 19.79,
+		pic: "../images/beefjerky.jpg"
 	},
 	{
 		name: "ice cream",
 		nut: true,
 		lactose: true,
 		organic: true,
-		price: 15.45
+		price: 15.45,
+		pic: "../images/icecream.jpg"
 	}
 ];
 	
@@ -108,9 +118,9 @@ function restrictListProducts(prods, restriction, organic) {
 
 //Is the final check for organicness, before adding to array, to be used in RestrictListProducts function
 function _organicCheck(item, organicBool){
-	if(organicBool == "true" && item.organic == true){
+	if(organicBool.checked && item.organic == true){
 		restricted_prods.push(item);
-	} else if (organicBool == "false") {
+	} else if (!(organicBool.checked)) {
 		restricted_prods.push(item);
 	}
 }

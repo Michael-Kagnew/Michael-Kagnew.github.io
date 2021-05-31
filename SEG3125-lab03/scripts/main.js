@@ -129,3 +129,18 @@ function selectedItems(){
 	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
 		
 }
+
+function closeNav() {
+	document.getElementById("mySidebar").style.width = "0";
+	document.getElementById("main").style.marginLeft= "0";
+  }
+
+  function openNav() {
+	document.getElementById("mySidebar").style.width = "250px";
+	
+	document.getElementById("main").style.marginLeft = "250px";
+  }
+
+  window.onload = function(){
+	document.getElementById('default').click();
+  }

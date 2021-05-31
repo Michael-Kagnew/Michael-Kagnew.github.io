@@ -9,11 +9,18 @@
 <body>
 <h1 id="shopName">Finesse Grocery Shop</h1>
 <!-- Tab links, each one with an onclick event associated with it -->
-<div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+<div class="tab" id="mySidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <button class="tablinks" id="default" onclick="openInfo(event, 'Client')">Client</button>
   <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Delivery')">Delivery</button>
   <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
 </div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Menu</button>  
+</div>
+
 
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
@@ -22,12 +29,6 @@
   <div class="dieteryOptions">
         <div class="dietList" id="Category">
             Choose a Category: </br>
-            <!-- <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct', 'organicSelect', 'priceOrder')">
-                <option value=""></option>
-                <option value="nut-free">Nut Free</option>
-                <option value="lactose-free">Lactose Free</option>
-                <option value="None">None</option>
-            </select> -->
           <input type="checkbox" value="nut-free" id="nut" name="restriction" onclick="populateListProductChoices(this.name,'displayProduct', 'organicSelect', 'priceOrder')">
           <label for="nut">Nut Free</label><br/>
           <input type="checkbox" value="lactose-free" id="lactose" name="restriction" onclick="populateListProductChoices(this.name,'displayProduct', 'organicSelect', 'priceOrder')">

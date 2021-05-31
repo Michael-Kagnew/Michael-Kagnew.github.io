@@ -11,21 +11,39 @@ body{
 
 /* Style the tab */
 .tab {
-  overflow: hidden;
+  /* overflow: hidden;
   border: 1px solid black;
-  background-color: #C5AE62;
+  background-color: #C5AE62; */
+    height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ad9850d8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-  background-color: inherit;
+  /* background-color: inherit;
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  font-size: inherit;
+  font-size: inherit; */
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  background-color: transparent;
+  display: block;
+  transition: 0.3s;
+  border: none;
 }
 
 /* Change background color of buttons on hover */
@@ -80,4 +98,22 @@ select {
 #lineUp{
   margin-left: 20px;
   margin-bottom: 0px;
+}
+
+
+.tab .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
 }

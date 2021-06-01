@@ -31,8 +31,7 @@ function populateListProductChoices(restrictionName,slct2, organicSelect, orderS
     // var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
 	var s3 = document.getElementById(organicSelect);
-	var s4 = document.getElementById(orderSelect);
-	
+	var s4 = document.getElementsByName(orderSelect);
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
 	s2.id = "displayProduct";
@@ -42,7 +41,7 @@ function populateListProductChoices(restrictionName,slct2, organicSelect, orderS
 
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, restrictions, s3);
-	 _priceSortOrder(optionArray, s4.value);
+	 _priceSortOrder(optionArray, s4);
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
 	// <label for="Bread">Bread/label><br>
@@ -99,12 +98,20 @@ function _mainRestriction(restrictionName){
 function _priceSortOrder(prods, order){
 	//  var displayedProducts = document.getElementById(prodId);
 	// var list = document.querySelector('#' + prodId);
-	if (order == "asc"){
+	let orderVal;
+
+	for(i=0; i < order.length; i++){
+		if (order[i].checked){
+			orderVal = order[i].value;
+		}
+	}
+
+	if (orderVal == "asc"){
 		 prods.sort((item1, item2) => (item1.price > item2.price ? 1 : (item1.price == item2.price) ? ((item1.name > item2.name) ? 1 : -1) : -1 ));
 		// [...list.children]
 		// .sort((a,b)=>a.innerText.substr(a.innerText.indexOf("$")+1) > b.innerText.substr(b.innerText.indexOf("$")+1) ?1:-1)
 		// .forEach(node=>list.appendChild(node));	
-	} else if (order =="dsc"){
+	} else if (orderVal =="dsc"){
 		 prods.sort((item1, item2) => (item1.price > item2.price ? -1 : (item1.price == item2.price) ? ((item1.name > item2.name) ? -1 : 1) : 1 ));
 	}
 }
@@ -138,7 +145,7 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + Math.round(getTotalPrice(chosenProducts))));
+	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
 		
 }
 
@@ -155,4 +162,9 @@ function closeNav() {
 
   window.onload = function(){
 	document.getElementById('default').click();
+  }
+
+  function formSubmit(){
+	  alert("Thank you for completing this form!");
+	  return false;
   }

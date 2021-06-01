@@ -15,7 +15,7 @@
   <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
   <button class="tablinks" onclick="openInfo(event, 'Delivery')">Delivery</button>
   <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
-  <button class="tablinks" onclick="openInfo(event, 'COVID-19 Plan')">COVID-19 Plan</button>
+  <button class="tablinks" onclick="openInfo(event, 'Covid')">COVID-19 Plan</button>
 
 </div>
 
@@ -43,11 +43,15 @@
             <input type="checkbox" id="organicSelect" name="restriction" onclick="populateListProductChoices(this.name, 'displayProduct', 'organicSelect', this.id)">
         </div>
         <div class="dietList">
-          Choose your price ordering:
-          <select id="priceOrder" name="priceOrder"  onchange="populateListProductChoices('restriction', 'displayProduct', 'organicSelect', this.id)">
+          Choose your price ordering: <br/>
+          <!-- <select id="priceOrder" name="priceOrder"  onchange="populateListProductChoices('restriction', 'displayProduct', 'organicSelect', this.id)">
             <option value="asc">Ascending</option>
             <option value="dsc">Descending</option>
-          </select>
+          </select> -->
+          <input type="radio" checked="checked" id="ascd" name="priceOrder" value="asc" onclick="populateListProductChoices('restriction', 'displayProduct', 'organicSelect', this.name)">
+          <label for="ascd">Ascending</label><br/>
+          <input type="radio" id="dscd" name="priceOrder" value="dsc" onclick="populateListProductChoices('restriction', 'displayProduct', 'organicSelect', this.name)">
+          <label for="dscd">Descending</label>
         </div>
     </div>
 </div>
@@ -58,7 +62,7 @@
 	 Choose items to buy:
 	 <div id="displayProduct"></div>
 	 <button id="addCart" type="button" class="block cool-button" onclick="selectedItems()">
-		Add selected items to cart.
+		Add selected items to cart
 	</button>
 </div>
 
@@ -66,6 +70,45 @@
   <h3>Cart</h3>
   <p>Here are the products in your cart currently.</p>
   <div id="displayCart"></div>
+</div>
+
+<div id="Delivery" class="tabcontent">
+  <h3>Delivery Form</h3>
+  <div >
+  <form action="javascript: alert('Thank you for your form submission!'); void(0);"  method="GET">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="Your phone number..">
+
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address" placeholder="Your address..">
+    <button type="submit" value="Submit" class="cool-button">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div id="Covid" class="tabcontent">
+  <h2>To All Our Valued Customers</h2>
+  <div id="letter"> 
+    <p >
+      With the recent rise of COVID-19, we would like to first and foremost assure you all that everyone working at Finesse Grocery
+      Shop has the sole intention of ensuring a safe, clean environment. We have worked dilgently to provide a shopping experience that 
+      will meet all your needs, both in person and online. <br/><br/>
+
+      This is why, with this announcement, I would personally like to inform you all of our new delivery feature. This feature will alleviate
+      many of your concerns of contracting the virus in the public, whilst obtaining fresh products at competitive prices. <br/> <br/>
+
+      On behalf of everyone at Finesse Grocery Shop, thank you for shopping with us. <br/><br/>
+    </p>
+    <p id="signature"> Michael Kagnew, <br/>
+    CEO of Finesse Grocery Shop </p>
+  </div>
 </div>
 
 

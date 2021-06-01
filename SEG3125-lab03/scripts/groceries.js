@@ -133,5 +133,5 @@ function getTotalPrice(chosenProducts) {
 			totalPrice += products[i].price;
 		}
 	}
-	return totalPrice;
+	return Math.round((totalPrice * 100)) /100;
 }

@@ -159,6 +159,7 @@ select {
   text-transform: uppercase;
   font-size: 13px;
   transition: all .2s ease-in-out;
+  border-radius: 10px;
 }
 
 .cool-button:hover {
@@ -168,4 +169,40 @@ select {
   border-radius: 30px;
 }
 
+#Covid {
+  justify-content: center;
+  text-align: center;
+}
+
+#letter {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#signature{
+  text-align: left;
+}
+
+#Delivery form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  margin: 0 auto;
+}
+#Delivery form input{
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid gray; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 4px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+
+#Delivery button{
+  width: 50%;
+  margin: 0 auto;
+}
 

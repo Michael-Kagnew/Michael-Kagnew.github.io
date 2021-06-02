@@ -9,7 +9,7 @@ var products = [
 		lactose: true,
 		organic: false,
 		price: 1.99,
-		pic: "../images/cookies.jpg"
+		pic: "images/cookies.jpg"
 	},
 	{
 		name: "bread",
@@ -17,7 +17,7 @@ var products = [
 		lactose: false,
 		organic: false,
 		price: 2.35,
-		pic: "../images/bread.jpg"
+		pic: "images/bread.jpg"
 	},
 	{
 		name: "cheese",
@@ -25,7 +25,7 @@ var products = [
 		lactose: true,
 		organic: true,
 		price: 9.00,
-		pic: "../images/cheese.jpg"
+		pic: "images/cheese.jpg"
 	},
 	{
 		name: "orange",
@@ -33,7 +33,7 @@ var products = [
 		lactose: false,
 		organic: true,
 		price: 5.51,
-		pic: "../images/orange.jpg"
+		pic: "images/orange.jpg"
 	},
 	{
 		name: "crackers",
@@ -41,7 +41,7 @@ var products = [
 		lactose: false,
 		organic: false,
 		price: 13.25,
-		pic: "../images/crackers.jpg"
+		pic: "images/crackers.jpg"
 	},
 	{
 		name: "blueberry",
@@ -49,7 +49,7 @@ var products = [
 		lactose: false,
 		organic: true,
 		price: 1.00,
-		pic: "../images/blueberries.jpg"
+		pic: "images/blueberries.jpg"
 	},
 	{
 		name: "cake",
@@ -57,7 +57,7 @@ var products = [
 		lactose: true,
 		organic: false,
 		price: 34.01,
-		pic: "../images/cake.jpg"
+		pic: "images/cake.jpg"
 	},
 	{
 		name: "trail mix",
@@ -65,7 +65,7 @@ var products = [
 		lactose: false,
 		organic: true,
 		price: 5.55,
-		pic: "../images/trailmix.jpg"
+		pic: "images/trailmix.jpg"
 	},
 	{
 		name: "beef jerky",
@@ -73,7 +73,7 @@ var products = [
 		lactose: false,
 		organic: false,
 		price: 19.79,
-		pic: "../images/beefjerky.jpg"
+		pic: "images/beefjerky.jpg"
 	},
 	{
 		name: "ice cream",
@@ -81,7 +81,7 @@ var products = [
 		lactose: true,
 		organic: true,
 		price: 15.45,
-		pic: "../images/icecream.jpg"
+		pic: "images/icecream.jpg"
 	}
 ];
 	

@@ -44,10 +44,6 @@
         </div>
         <div class="dietList">
           Choose your price ordering: <br/>
-          <!-- <select id="priceOrder" name="priceOrder"  onchange="populateListProductChoices('restriction', 'displayProduct', 'organicSelect', this.id)">
-            <option value="asc">Ascending</option>
-            <option value="dsc">Descending</option>
-          </select> -->
           <input type="radio" checked="checked" id="ascd" name="priceOrder" value="asc" onclick="populateListProductChoices('restriction', 'displayProduct', 'organicSelect', this.name)">
           <label for="ascd">Ascending</label><br/>
           <input type="radio" id="dscd" name="priceOrder" value="dsc" onclick="populateListProductChoices('restriction', 'displayProduct', 'organicSelect', this.name)">
@@ -70,6 +66,7 @@
   <h3>Cart</h3>
   <p>Here are the products in your cart currently.</p>
   <div id="displayCart"></div>
+  <div id="totalCost"></div>
 </div>
 
 <div id="Delivery" class="tabcontent">

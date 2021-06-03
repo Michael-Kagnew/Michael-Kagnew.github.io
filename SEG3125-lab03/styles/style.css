@@ -150,6 +150,12 @@ select {
   justify-content: center;
 }
 
+#displayCart{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 
 .cool-button, .cool-button:link, .cool-button:visited {
   padding: 13px 0;

@@ -75,8 +75,7 @@ function populateListProductChoices(restrictionName,slct2, organicSelect, orderS
 		itemContainer.appendChild(label);
 
 		//append the item container to the html element that will contain all the other item containers
-		s2.appendChild(itemContainer);
-		
+		 s2.appendChild(itemContainer);
 		// create a breakline node and add in HTML DOM
 		//s2.appendChild(document.createElement("br"));    
 	}
@@ -125,28 +124,59 @@ function _priceSortOrder(prods, order){
 
 function selectedItems(){
 	
+	//Getting the elements in the product page
 	var ele = document.getElementsByName("product");
 	var chosenProducts = [];
 	
+	//Getting and prepping the divs to have dynamic conent put in it
+	let priceText = document.getElementById("totalCost");
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
-	
-	// build list of selected item
-	var para = document.createElement("P");
-	para.innerHTML = "You selected : ";
-	para.appendChild(document.createElement("br"));
+	priceText.innerHTML = "";
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
-			para.appendChild(document.createTextNode(ele[i].value));
-			para.appendChild(document.createElement("br"));
-			chosenProducts.push(ele[i].value);
+
+			 chosenProducts.push(ele[i].value);
+			let product;
+			let prodName = ele[i].value;
+			 products.forEach( val => {if (val['name'] === prodName) product = val});
+			 let item = createItem(prodName, product['pic'] , product['price'], false);
+			c.appendChild(item);
 		}
+
 	}
 		
 	// add paragraph and total price
-	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
+	priceText.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
 		
+}
+
+function createItem(productName, photo, productPrice, inputBool){
+	var itemContainer = document.createElement("div");
+	itemContainer.className += "itemCard";
+	var image = document.createElement("img");
+	image.src = photo;
+	itemContainer.appendChild(image);
+
+
+	// create the checkbox and add in HTML DOM only if input bool allows for it
+	if (inputBool){
+		var checkbox = document.createElement("input");
+		checkbox.type = "checkbox";
+		checkbox.name = "product";
+		checkbox.value = productName;
+		itemContainer.appendChild(checkbox);
+	}
+
+	itemContainer.appendChild(document.createElement("br"));
+
+	// create a label for the checkbox, also add it to the item container
+	var label = document.createElement('label')
+	label.htmlFor = productName;
+	label.appendChild(document.createTextNode(productName + " $" + productPrice));
+	itemContainer.appendChild(label);
+
+	return itemContainer;
 }
 
 function closeNav() {

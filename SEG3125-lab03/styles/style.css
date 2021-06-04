@@ -178,6 +178,10 @@ select {
 
 #Covid {
   justify-content: center;
+  text-align: left;
+}
+
+#Covid h2 {
   text-align: center;
 }
 

@@ -16,6 +16,11 @@
  
 }
 
+.top-label img {
+    width: 100%;
+    height: auto;
+}
+
 #main{
     margin: 20px;
 }
@@ -62,6 +67,7 @@
 
 footer{
     background-color: #0C2C52;
+    align-content: center;
 }
 
 footer p {

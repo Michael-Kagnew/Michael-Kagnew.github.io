@@ -1,0 +1,79 @@
+
+.te{
+    border: 2px solid black;
+}
+
+.top-label{
+    background-image: url("../images/imageedit_4_8494435028.png");
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+ 
+}
+
+.top-label img {
+    width: 100%;
+    height: auto;
+}
+
+#main{
+    margin: 20px;
+}
+
+.row-section{
+    margin-bottom:40px;
+}
+
+.card-container{
+    background-color:#dcf0f7;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    
+}
+
+.business-name{
+    color: #5E9DCB;
+}
+
+.header-text{
+    color: #5F6B61;
+    width: fit-content;
+    margin-left:  auto;
+    margin-right: auto;
+
+}
+
+
+
+.btn-color{
+    background-color: #5E9DCB;
+    color: white;
+}
+
+.btn-color:hover{
+    background-color: #4f83a8 ;
+}
+
+
+
+footer{
+    background-color: #0C2C52;
+    align-content: center;
+}
+
+footer p {
+    color: #dcf0f7;
+}
+
+input:hover{
+    border: 1px solid orange;
+}

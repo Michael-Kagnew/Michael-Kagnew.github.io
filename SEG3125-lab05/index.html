@@ -4,233 +4,277 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" size="512x512" href="images/site_icon/icon-2.png">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" size="512x512" href="images/site_icon/icon-2.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+
+    <!-- Jquery javascript imports stuff -->
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>                      
     <script src="scripts/main.js"> </script>
-    
+    <script src="scripts/theming.js"> </script>
+    <script src="scripts/experts.js"> </script>  
 
     <title>FInesse Physio</title>
 </head>
+
 <body>
-    <section>
-        <div class=" top-label">
-            <div class="row gx-0">
-                <div class="col-4  ">
-                    <img src="images/site_icon/icon-2.png">
-                </div>
-                <div class="col-6 mt-3 text-start">
-                    <p class="display-3 fw-bold  business-name ">Finesse <br/> Physiotheraphy</p>
-                </div>
-            </div>
-            <div class="row">
-                <p class="fs-3 fw-bolder fst-italic mt-4 mb-5 header-text"> Rejuvenate your life, one step at a time.</p>
 
+    <div class="fluid-continer">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end justify-content-md-end row" id="navbarSupportedContent">
+                <div class="col-6 col-md-12  bg-light">
+                    <ul class="navbar-nav  mb-2 mb-lg-0 ">
+                        <li class="nav-item ">
+                          <a class="nav-link active" aria-current="page" href="#home"><img src="images/site_icon/icons8-home-40.png"> Home </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" aria-current="page" href="#services"><img src="images/site_icon/chiropractic_40.png"> Services </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" aria-current="page" href="#"> <img src="images/site_icon/icons8-physical-therapy-40.png"> Experts</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"><img src="images/site_icon/icons8-calendar-40.png"> Booking</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#" tabindex="-1"> <img src="images/site_icon/icons8-card-payment-40.png" > Payment</a>
+                        </li>
+                      </ul>
+                </div>    
+              </div>
             </div>
-            <div class="row">
-                <p class="fs-6 fw-bold"> 130 Rivermist Drive K1G 0H1, Vancouver, B.C</p> 
-            </div>
-            </div>
+          </nav>
         
-        </div>
-    </section>
-
-    <section id="main">
-
-        <p class="col-sm-12  fs-3 fw-bold header-text"> Available Services</p>
-        <div class="row row-section gy-3 text-center card-container pb-3" >
-            <div class="col-6 ">
-                <div class="card" >
-                    <img src="images/aqua.png" alt="" class="card-img-top border-bottom" >
-                    <div class="card-body">
-                        <p class="lead text-nowrap">Aqua Therapy</p>
+        <div id="home">
+            <div class=" top-label">
+                <div class="row gx-0">
+                    <div class="col-4">
+                        <img src="images/site_icon/icon-2.png">
+                    </div>
+                    <div class="col-6 mt-3 text-start">
+                        <p class="display-3 fw-bold  business-name ">Finesse <br/> Physiotheraphy</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-6">
-                <div class="card">
-                    <img src="images/chiro.jpg" alt="" class="card-img-top border-bottom" >
-                    <div class="card-body">
-                        <p class="lead text-nowrap">Chiropractic Service</p>
-                    </div>
+                <div class=" row">
+                    <p class="fs-3 fw-bolder fst-italic   header-text"> Rejuvenate your life, one step at a time.</p>
                 </div>
-            </div>
+                <div class="row">
+                    <p class="fs-6 fw-bold"> 130 Rivermist Drive K1G 0H1, Vancouver, B.C</p> 
+                </div>
             
-            <div class="col-6">
-                <div class="card">
-                    <img src="images/movementR.jpg" alt="" class="card-img-top border-bottom">
-                    <div class="card-body">
-                        <p class="lead text-nowrap">Movement Rehab</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-6">
-                <div class="card">
-                    <img src="images/acupuncture.jpg" alt="" class="card-img-top border-bottom">
-                    <div class="card-body">
-                        <p class="lead text-nowrap">Acupuncture Therapy</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-6">
-                <div class="card">
-                    <img src="images/massage.jpg" alt="" class="card-img-top border-bottom">
-                    <div class="card-body">
-                        <p class="lead text-nowrap">Massage Therapy</p>
-                    </div>
-                </div>
             </div>
         </div>
-
-        <p class="col-sm-12  fs-3 fw-bold header-text"> Meet the Team of Experts!</p>
-        <div class="row gy-3 row-section  card-container  pb-3">
-            <div class="col-6">
-                <div class="card">
-                    <img src="images/dr-bianca.png" alt="" class="card-img-top">
-                    <div class="card-body border-bottom">
-                        <p class="lead text-nowrap text-center"> Dr. Bianca Taylor</p>
-                    </div>
-                    <div class="card-body">
-                        <p>Known for her soothing massages, Bianca has two Ph.D in kinesiology and physiotherapy, and is highly capable in all physiotherapy elements.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-6">
-                <div class="card">
-                    <img src="images/Dr-jared.png" alt="" class="card-img-top">
-                    <div class="card-body border-bottom">
-                        <p class="lead text-nowrap text-center">Dr. Michael Porter</p>
-                    </div>
-                    <div class="card-body">
-                        <p>Renowed for his skills in aqua therapy, chiropractic exercises, and more, Michael is one of the best for physical therapy.</p>
+    
+        <div id="main">
+    
+            <p class="col-sm-12  fs-3 fw-bold header-text" id="services"> Available Services</p>
+            <div class="row row-section gy-3 text-center card-container pb-3 "  >
+                <div class="col-6 col-lg-4">
+                    <div class="card" >
+                        <img src="images/aqua.png" alt="" class="card-img-top border-bottom" >
+                        <div class="card-body">
+                            <p class="lead text-nowrap">Aqua Therapy</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-6">
-                <div class="card">
-                    <img src="images/dr-mark.png" alt="" class="card-img-top">
-                    <div class="card-body border-bottom">
-                        <p class="lead text-nowrap text-center">Dr. Nikola Jokic</p>
+    
+                <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/chiro.jpg" alt="" class="card-img-top border-bottom" >
+                        <div class="card-body">
+                            <p class="lead text-nowrap">Chiropractic Service</p>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <p  >Has a Ph.D in acupuncture therapy and has served over 300 clients.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <p class="col-sm-12  fs-3 fw-bold text-center header-text"> Appointment Form</p>
-        <div class="row d-flex justify-content-center">
-            <div class="col-10">
-                <p class="fs-4"> Fill out the form below to meet with a specialist.</p>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-
-        <form class="card-container p-2">
-            <p class="col-sm-12  fs-5 u text-center text-decoration-underline header-text "> Service Selection</p>
-
-                <div class="row gy-2 gx-2 mb-4">
-                    <div class=" form-check col-4">
-                        <input class="form-check-input" type="checkbox" value="" id="MoveR">
-                        <label class="form-check-label" for="MoveR">Movement Rehab</label>
-                    </div>
-                    <div class=" form-check col-4">
-                        <input class="form-check-input" type="checkbox" value="" id="Massage">
-                        <label class="form-check-label" for="Massage">Massage Therapy</label>
-                    </div>
-                    <div class=" form-check col-4">
-                        <input class="form-check-input" type="checkbox" value="" id="AquaTherapy">
-                        <label class="form-check-label" for="AquaTherapy">Aqua Therapy</label>
-                    </div>
-                    <div class=" form-check col-4">
-                        <input class="form-check-input" type="checkbox" value="" id="Chiro">
-                        <label class="form-check-label" for="Chiro">Chiropractic Service</label>
-                    </div>
-                    <div class=" form-check col-4">
-                        <input class="form-check-input" type="checkbox" value="" id="Acupuncture">
-                        <label class="form-check-label" for="Acupuncture">Acupuncture</label>
-                    </div>
-                </div>
-            
-            
-            <p class="col-sm-12  fs-5 u text-center text-decoration-underline header-text "> Date and Time</p>
-            <div class="row gy-2 gx-0 mb-4">
-                <div class="col-6 d-flex justify-content-center">
-                    <input type="text" id="datepicker">
-                </div>
-                <div class="col-6 d-flex justify-content-center">
-                    <input type="time" min="8:00" max="16:00"  step="1800">
-                </div>
-            </div>
-
-            <p class="col-sm-12 fs-5 u text-center text-decoration-underline header-text"> Contact Information</p>
-                <div class="row gy-2 mb-4">
-                    <div class="col-6">
-                        <label for="FirstName" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="FirstName" placeholder="First name here...">
-                    </div>             
-                    <div class="col-6">
-                        <label for="LastName" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="LastName" placeholder="Last name here...">
-                    </div>    
                 </div>
                 
-                <div class="row gy-2 mb-4">
-                    <div class="col-6">
-                        <label for="Email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="Email" placeholder="Email here...">
-                    </div>             
-                    <div class="col-6">
-                        <label for="Phone" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="LastName" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="613-822-1254">
-                    </div>                        
+                <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/movementR.jpg" alt="" class="card-img-top border-bottom">
+                        <div class="card-body">
+                            <p class="lead text-nowrap">Movement Rehab</p>
+                        </div>
+                    </div>
                 </div>
-
-            <button class="btn-color col-12 rounded-3"  type="submit">Submit</button>
-
-        </form>
-
-    </section>
-
+                
+                <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/acupuncture.jpg" alt="" class="card-img-top border-bottom">
+                        <div class="card-body">
+                            <p class="lead text-nowrap">Acupuncture Therapy</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/massage.jpg" alt="" class="card-img-top border-bottom">
+                        <div class="card-body">
+                            <p class="lead text-nowrap">Massage Therapy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
     
-    <section>
-        <div>
-
-        </div>
-    </section>
- 
-    <section>
-        <footer class="container-fluid">
-            <div class="row justify-content-center ">
-                <p class="col-5 text-nowrap  ">Finesse Physiotheraphy</p>
+            <p class="col-sm-12  fs-3 fw-bold header-text"> Meet the Team of Experts!</p>
+            <div class="row gy-3 row-section  card-container justify-content-lg-evenly pb-3">
+                <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/dr-bianca.png" alt="" class="card-img-top">
+                        <div class="card-body border-bottom">
+                            <p class="lead text-nowrap text-center"> Dr. Bianca Taylor</p>
+                        </div>
+                        <div class="card-body">
+                            <p>Known for her soothing massages, Bianca has two Ph.D in kinesiology and physiotherapy, and is highly capable in all physiotherapy elements.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/Dr-jared.png" alt="" class="card-img-top">
+                        <div class="card-body border-bottom">
+                            <p class="lead text-nowrap text-center">Dr. Michael Porter</p>
+                        </div>
+                        <div class="card-body">
+                            <p>Renowed for his skills in aqua therapy, chiropractic exercises, and more, Michael is one of the best for physical therapy.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/dr-mark.png" alt="" class="card-img-top">
+                        <div class="card-body border-bottom">
+                            <p class="lead text-nowrap text-center">Dr. Nikola Jokic</p>
+                        </div>
+                        <div class="card-body">
+                            <p  >Has a Ph.D in acupuncture therapy and has served over 300 clients.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+    
+            <p class="col-sm-12  fs-3 fw-bold text-center header-text"> Appointment Form</p>
             <div class="row">
-                <div class="d-flex justify-content-center col-12">
-                    <p> 130 Rivermist Drive K1G 0H1, Vancouver, B.C</p> 
+                <div class="col-12 d-flex justify-content-center">
+                    <p class="fs-4 d-inline"> Fill out the form below to meet with a specialist.</p>
                 </div>
             </div>
-            <div class="row ">
-                <div class="d-flex justify-content-center col-6">
-                    <p>Open Days: Monday-Sunday</p>
-                </div>
-                <div class="col-6 d-flex justify-content-center ">
-                    <p>Open Time: 8am-4pm</p>
-                </div>
+            <div class="container">
+                <div>
+                    <form class="card-container p-2">
+                        <p class="col-sm-12  fs-5 u text-center text-decoration-underline header-text "> Service Selection</p>
+        
+                        <div class="row gy-2 gx-2 mb-4">
+                            <div class=" form-check col-4">
+                                <input class="form-check-input" type="checkbox" value="" id="MoveR">
+                                <label class="form-check-label" for="MoveR">Movement Rehab</label>
+                            </div>
+                            <div class=" form-check col-4">
+                                <input class="form-check-input" type="checkbox" value="" id="Massage">
+                                <label class="form-check-label" for="Massage">Massage Therapy</label>
+                            </div>
+                            <div class=" form-check col-4">
+                                <input class="form-check-input" type="checkbox" value="" id="AquaTherapy">
+                                <label class="form-check-label" for="AquaTherapy">Aqua Therapy</label>
+                            </div>
+                            <div class=" form-check col-4">
+                                <input class="form-check-input" type="checkbox" value="" id="Chiro">
+                                <label class="form-check-label" for="Chiro">Chiropractic Service</label>
+                            </div>
+                            <div class=" form-check col-4">
+                                <input class="form-check-input" type="checkbox" value="" id="Acupuncture">
+                                <label class="form-check-label" for="Acupuncture">Acupuncture</label>
+                            </div>
+                        </div>
+                    
+                    
+                    <p class="col-sm-12  fs-5 u text-center text-decoration-underline header-text "> Date and Time</p>
+                    <div class="row gy-2 gx-0 mb-4">
+                        <div class="col-6 d-flex justify-content-center">
+                            <input type="text" id="datepicker">
+                        </div>
+                        <div class="col-6 d-flex justify-content-center">
+                            <input type="time" min="8:00" max="16:00"  step="1800">
+                        </div>
+                    </div>
+        
+                    <p class="col-sm-12 fs-5 u text-center text-decoration-underline header-text"> Contact Information</p>
+                        <div class="row gy-2 mb-4">
+                            <div class="col-6">
+                                <label for="FirstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="FirstName" placeholder="First name here...">
+                            </div>             
+                            <div class="col-6">
+                                <label for="LastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="LastName" placeholder="Last name here...">
+                            </div>    
+                        </div>
+                        
+                        <div class="row gy-2 mb-4">
+                            <div class="col-6">
+                                <label for="Email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="Email" placeholder="Email here...">
+                            </div>             
+                            <div class="col-6">
+                                <label for="Phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="LastName" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="613-822-1254">
+                            </div>                        
+                        </div>
+        
+                    <button class="btn-color col-12 rounded-3"  type="submit">Submit</button>
+                    <div id="ui-here"></div>
+    
+                </form>
+        
             </div>
-        </footer>
-    </section>
+            </div>
+            
+        
+    <!-- <div>
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    Hey yo
+                </p>
+                <button> here</button>
+            </div>
+        </div>
+    </div> -->
+
+        <div>
+            <footer class="container-fluid">
+                <div class="row justify-content-center mt-2 mt-md ">
+                    <p class="col-5 text-nowrap  ">Finesse Physiotheraphy</p>
+                </div>
+                <div class="row">
+                    <div class="d-flex justify-content-center col-12">
+                        <p> 130 Rivermist Drive K1G 0H1, Vancouver, B.C</p> 
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="d-flex justify-content-center col-6">
+                        <p>Open Days: Monday-Sunday</p>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center ">
+                        <p>Open Time: 8am-4pm</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 
 </body>
 </html>

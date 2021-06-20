@@ -2,19 +2,14 @@
 
 $(document).ready(function(){
     
-     if($("input[type='radio'][name='specialist']").is(":checked")){
 
+    $( "#datepicker" ).datepicker({
+        minDate: 0
+    });
 
-        $('input.timepicker').timepicker({}); //CHANGE THIS
+    $('input#timepicker').timepicker({}); 
 
-     } else {
-        $( "#datepicker" ).datepicker({
-            minDate: 0
-        });
-
-        $('input.timepicker').timepicker({}); 
-
-     }
+     
 
     $("input[type='radio']").checkboxradio();
     $("input[type='checkbox']").checkboxradio();
@@ -34,23 +29,31 @@ $(document).ready(function(){
         showSpecialist(services_selected);        
     });
 
+    //Listen to specialist selection and edit the calendar and time availability
+    $("#specialists input[type='radio']").click(function(){
+        if($(this).is(":checked")){
+            specialistSchedule();
+        }
+    })
 
 
 
 
 });
 
+//Manipulate which specialist shown depending on service clicked
 function showSpecialist(services_selected){
-    for(let expert in expertInfo){
-        //console.log(expert);
+
+    //Need to reset the datepicker
+    $( "#datepicker" ).datepicker("option", "beforeShowDay", null);
+
+    for(let expert in expertInfo){ //Going through the experts, seeing if they have the same services as selected.
         let flag = true;
         services_for_expert = expertInfo[expert]["services"];
-        console.log(services_for_expert);
-        console.log(services_selected);
+
 
         for (let i =0; i < services_selected.length; i++){
             temp_flag = services_for_expert.includes(services_selected[i]);
-            // for(let x =0; x < services_for_expert.length; x++)
             if (temp_flag == false){
                 flag = false;
                 $("#"+expert).parent().hide();
@@ -65,21 +68,18 @@ function showSpecialist(services_selected){
 
 }
 
-function SpecialistSelection(){
+//
+function specialistSchedule(){
     
-    $( "#datepicker" ).datepicker("option", "disabledDates", );
-
+    $( "#datepicker" ).datepicker("option", "beforeShowDay", availableDates);
+    availableTime();
 
 }
 
 
-function disabledDates(day){
-
+function availableDates(day){
     let specialist = $("input[type='radio'][name='specialist']:checked").val();
-    // let specialist = $("#specialists input:checked").val();
-    // let specialist = $("#specialists input:checked").attr("value");
-    console.log(specialist)
-    specialist_days = expertInfo[specialist]["days"];
+    let specialist_days = expertInfo[specialist]["days"];
     
     let flag = false;
     for (let i = 0; i < specialist_days.length; i++){
@@ -89,4 +89,23 @@ function disabledDates(day){
     }
     return [flag];
 }
-  
+
+
+function availableTime(){
+    let specialist = $("input[type='radio'][name='specialist']:checked").val();
+    let specialist_min_time = expertInfo[specialist]["minTime"];
+    let specialist_max_time = expertInfo[specialist]["maxTime"];
+    
+    //Removing the default timepicker, and then will add the new one with different time for specialist.
+    $("input#timepicker").remove();
+    $("label[for='timepicker']").append(
+        "<input id='timepicker'></input>"
+        );
+
+    $('input#timepicker').timepicker({
+        timeFormat: 'hh:mm p',
+        minTime: specialist_min_time ,
+        maxTime: specialist_max_time,
+        interval: 30
+    });
+}

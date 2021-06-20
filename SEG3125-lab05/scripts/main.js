@@ -1,18 +1,23 @@
 
 
 $(document).ready(function(){
-    
-
     $( "#datepicker" ).datepicker({
         minDate: 0
     });
 
     $('input#timepicker').timepicker({}); 
-
-     
-
     $("input[type='radio']").checkboxradio();
-    $("input[type='checkbox']").checkboxradio();
+    $("input[type='checkbox']").checkboxradio({
+        icon: true,
+        classes:{
+            // "ui-checkboxradio-icon": custom 
+        }
+    });
+
+    $("#form-submit").click(function(){
+        checkSubmission();
+    })
+    $("select").selectmenu();
     //Setting the values for each service input dynamically here
     $("#MoveR").val(services["Movement"]);
     $("#Massage").val(services["Massage"]);
@@ -37,6 +42,11 @@ $(document).ready(function(){
     })
 
 
+    $("#credit-card").tooltip({
+        classes: {
+            "ui-tooltip": "ui-corner-all tooltip-shadow"
+          }
+    });
 
 
 });
@@ -98,8 +108,8 @@ function availableTime(){
     
     //Removing the default timepicker, and then will add the new one with different time for specialist.
     $("input#timepicker").remove();
-    $("label[for='timepicker']").append(
-        "<input id='timepicker'></input>"
+    $("label[for='timepicker']").after(
+        "<input id='timepicker' class='form-control'></input>"
         );
 
     $('input#timepicker').timepicker({
@@ -108,4 +118,21 @@ function availableTime(){
         maxTime: specialist_max_time,
         interval: 30
     });
+}
+
+//Attached to submit button of the form
+function checkSubmission(){
+    let credit_card_num = $("#credit-card").val();
+    console.log(credit_card_num);
+    creditCardFormat(credit_card_num);
+}
+
+function creditCardFormat(creditNumber){
+    const credit_regex = new RegExp("^[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}$");
+    
+
+    let valid_num = credit_regex.test(creditNumber);
+    if (!valid_num){
+        alert("incorrect credit card format, please have it in the xxxx xxxx xxxx xxxx format.");
+    }
 }

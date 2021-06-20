@@ -1,7 +1,9 @@
 $(document).ready(function(){
-    $( "button" ).button({
-        classes: {
-          "ui-button": "Redmond"
-        }
-      });
+    // $( "button" ).button({
+    //     classes: {
+    //       "ui-button": "Base"
+    //     }
+    //   });
+    
+    $("button[type='submit']").addClass("custom")
 })

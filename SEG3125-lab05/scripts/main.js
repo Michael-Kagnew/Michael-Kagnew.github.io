@@ -14,6 +14,7 @@ $(document).ready(function(){
         }
     });
 
+    //To check when the form is submitted, all the fields.
     $("#form-submit").click(function(){
         checkSubmission();
     })
@@ -42,7 +43,7 @@ $(document).ready(function(){
     })
 
 
-    $("#credit-card").tooltip({
+    $("#credit-card, #Phone, #Email").tooltip({
         classes: {
             "ui-tooltip": "ui-corner-all tooltip-shadow"
           }
@@ -123,16 +124,48 @@ function availableTime(){
 //Attached to submit button of the form
 function checkSubmission(){
     let credit_card_num = $("#credit-card").val();
-    console.log(credit_card_num);
+    let phone_number = $("#Phone").val();
+    let email_address = $("#Email").val();
+    let last_name = $("#FirstName").val();
+    let first_name = $("#LastName").val();
+    
     creditCardFormat(credit_card_num);
+    phoneNumberFormat(phone_number);
+    emailFormat(email_address);
+    nameFormat(first_name,last_name);
 }
 
-function creditCardFormat(creditNumber){
+function creditCardFormat(credit_number){
     const credit_regex = new RegExp("^[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}$");
-    
-
-    let valid_num = credit_regex.test(creditNumber);
+    let valid_num = credit_regex.test(credit_number);
     if (!valid_num){
-        alert("incorrect credit card format, please have it in the xxxx xxxx xxxx xxxx format.");
+        alert("Please enter the correct credit card format, replacing the 'x' with digits:  xxxx xxxx xxxx xxxx");
     }
 }
+
+function phoneNumberFormat(phone_number){
+    const phone_regex = new RegExp("^[0-9]{3}-[0-9]{3}-[0-9]{4}$");
+    let valid_phone = phone_regex.test(phone_number);
+    if (!valid_phone){
+        alert("Please enter the correct phone number format, replacing the 'x' with digits: xxx-xxx-xxxx");
+    }
+}
+
+function emailFormat(email_address){
+    const email_regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let valid_email = email_regex.test(email_address);
+    if(!valid_email){
+        alert("Please enter a valid email address.")
+    }
+}
+
+function nameFormat(first_name, last_name){
+
+    if(!first_name){
+        alert("Please enter a first name.")
+    } if(!last_name){
+        alert("Please enter a last name.")
+
+    }
+}
+

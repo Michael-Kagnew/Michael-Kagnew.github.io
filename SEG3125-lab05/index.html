@@ -21,15 +21,15 @@
 
 <body>
     <div class="fluid-continer">
-        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse justify-content-end justify-content-md-end row" id="navbarSupportedContent">
-                <div class="col-6 col-md-12  bg-light">
-                    <ul class="navbar-nav  mb-2 mb-lg-0 ">
+                <div class="col-6 col-md-12">
+                    <ul class="navbar-nav bg-dark mb-2 mb-lg-0 ">
                         <li class="nav-item ">
                           <a class="nav-link active" aria-current="page" href="#home"><img src="images/site_icon/icons8-home-40.png"> Home </a>
                         </li>
@@ -43,7 +43,7 @@
                           <a class="nav-link" href="#appointment"><img src="images/site_icon/icons8-calendar-40.png"> Booking</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#" tabindex="-1"> <img src="images/site_icon/icons8-card-payment-40.png" > Payment</a>
+                          <a class="nav-link" href="#payment" tabindex="-1"> <img src="images/site_icon/icons8-card-payment-40.png" > Payment</a>
                         </li>
                       </ul>
                 </div>    
@@ -166,127 +166,135 @@
                 </div>
             </div>
             <div class="container">
-                <form class="card-container p-3" action="javascript: void(0);">
-                    <p class="col-sm-12  fs-5 u text-center text-decoration-underline header-text"> Service Selection </p>
-                    <div class="row gy-2 mb-4 d-grid justify-content-center d-lg-flex justify-content-lg-start " id="service_form">
-                        <div class=" form-check col-12 col-lg-4">
-                            <input class="form-check-input" type="checkbox" value="" id="MoveR">
-                            <label class="form-check-label" for="MoveR">Movement Rehab</label>
+                <form action="javascript: void(0);">
+                    <div class=" p-2 card-container">
+                        <p class="col-sm-12  fs-5 u text-center text-decoration-underline header-text"> Service Selection </p>
+                        <div class="row gy-2 mb-4 d-grid justify-content-center d-lg-flex justify-content-lg-start " id="service_form">
+                            <div class=" form-check col-12 col-lg-4">
+                                <input class="form-check-input" type="checkbox" value="" id="MoveR">
+                                <label class="form-check-label" for="MoveR">Movement Rehab</label>
+                            </div>
+                            <div class=" form-check col-12 col-lg-4">
+                                <input class="form-check-input" type="checkbox" value="" id="Massage">
+                                <label class="form-check-label" for="Massage">Massage Therapy</label>
+                            </div>
+                            <div class=" form-check col-12 col-lg-4">
+                                <input class="form-check-input" type="checkbox" value="" id="AquaTherapy">
+                                <label class="form-check-label" for="AquaTherapy">Aqua Therapy</label>
+                            </div>
+                            <div class=" form-check col-12 col-lg-4">
+                                <input class="form-check-input" type="checkbox" value="" id="Chiro">
+                                <label class="form-check-label" for="Chiro">Chiropractic Service</label>
+                            </div>
+                            <div class=" form-check col-12 col-lg-4">
+                                <input class="form-check-input" type="checkbox" value="" id="Acupuncture">
+                                <label class="form-check-label" for="Acupuncture">Acupuncture</label>
+                            </div>
                         </div>
-                        <div class=" form-check col-12 col-lg-4">
-                            <input class="form-check-input" type="checkbox" value="" id="Massage">
-                            <label class="form-check-label" for="Massage">Massage Therapy</label>
+                        
+                        <p class="col-sm-12 fs-5 u text-center text-decoration-underline header-text"> Choose a Specialist</p>
+                        <div class="row gy-2 gx-2 mb-4 d-grid justify-content-center" id="specialists">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="Nikola" name="specialist" id="Nikola">
+                                <label class="form-check-label" for="Nikola">Dr. Nikola Jokic</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="Michael" name="specialist" id="Michael">
+                                <label class="form-check-label" for="Michael">Dr. Michael Porter</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="Bianca" name="specialist" id="Bianca">
+                                <label class="form-check-label" for="Bianca">Dr. Bianca Taylor</label>
+                            </div>
+                        </div>                    
+                    
+                        <p class="col-sm-12  fs-5 u text-center text-decoration-underline header-text "> Date and Time</p>
+                        <div class="row gy-2 mb-4">
+                            <div class="col-6">
+                                <label for="datepicker" class="form-label">Date</label>
+                                <input id="datepicker" class="form-control">
+                            </div>
+                            <div class="col-6">
+                                <label for="timepicker" class="form-label">Time</label>
+                                <input id="timepicker" class="form-control" >
+                            </div>
                         </div>
-                        <div class=" form-check col-12 col-lg-4">
-                            <input class="form-check-input" type="checkbox" value="" id="AquaTherapy">
-                            <label class="form-check-label" for="AquaTherapy">Aqua Therapy</label>
+                
+                        <p class="col-sm-12 fs-5 u text-center text-decoration-underline header-text"> Contact Information</p>
+                        <div class="mb-4">
+                            <div class="row gy-2 mb-4">
+                                <div class="col-6">
+                                    <label for="FirstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="FirstName" placeholder="First name here...">
+                                </div>             
+                                <div class="col-6">
+                                    <label for="LastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="LastName" placeholder="Last name here...">
+                                </div>    
+                            </div>
+                            <div class="row gy-2 mb-4">
+                                <div class="col-6">
+                                    <label for="Email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="Email" title="To contact you for further information." placeholder="Email here...">
+                                </div>             
+                                <div class="col-6">
+                                    <label for="Phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="Phone" title="To contact you for further information." pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="613-822-1254">
+                                </div>                        
+                            </div>
                         </div>
-                        <div class=" form-check col-12 col-lg-4">
-                            <input class="form-check-input" type="checkbox" value="" id="Chiro">
-                            <label class="form-check-label" for="Chiro">Chiropractic Service</label>
+                    </div>
+  
+
+                    
+                    <p class="col-sm-12 mt-3 fs-3 fw-bold text-center header-text" id="payment"> Payment Information</p>
+                    <div class=" card-container p-2">
+                        <div>
+                            <div class="row gy-2 mb-3">
+                                <div class="col-12">
+                                    <label for="credit-card" class="form-label">Credit Card Number</label>
+                                    <input type="text" class="form-control" id="credit-card" title="This is only needed in case of last minute cancellation." placeholder="xxxx xxxx xxxx xxxx"> 
+                                </div>
+                            </div>
+                            <div>
+                                <p>Expiry Date</p>
+                            </div>
+                            <div class="row gy-2 mb-4  d-grid justify-content-center d-lg-flex justify-content-lg-start">
+                                <div class="col-12 col-lg-6">
+                                    <label for="month">Month: </label>
+                                    <select id="month">
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <label for="year">Year:  </label>
+                                    <select id="year">
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class=" form-check col-12 col-lg-4">
-                            <input class="form-check-input" type="checkbox" value="" id="Acupuncture">
-                            <label class="form-check-label" for="Acupuncture">Acupuncture</label>
-                        </div>
+                        <button class="btn-color col-12 rounded-3" id="form-submit"  type="submit">Submit</button>    
+
                     </div>
                     
-                    <p class="col-sm-12 fs-5 u text-center text-decoration-underline header-text"> Choose a Specialist</p>
-                    <div class="row gy-2 gx-2 mb-4 d-grid justify-content-center" id="specialists">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Nikola" name="specialist" id="Nikola">
-                            <label class="form-check-label" for="Nikola">Dr. Nikola Jokic</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Michael" name="specialist" id="Michael">
-                            <label class="form-check-label" for="Michael">Dr. Michael Porter</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Bianca" name="specialist" id="Bianca">
-                            <label class="form-check-label" for="Bianca">Dr. Bianca Taylor</label>
-                        </div>
-                    </div>                    
-                
-                    <p class="col-sm-12  fs-5 u text-center text-decoration-underline header-text "> Date and Time</p>
-                    <div class="row gy-2 mb-4">
-                        <div class="col-6">
-                            <label for="datepicker" class="form-label">Date</label>
-                            <input id="datepicker" class="form-control">
-                        </div>
-                        <div class="col-6">
-                            <label for="timepicker" class="form-label">Time</label>
-                            <input id="timepicker" class="form-control" >
-                        </div>
-                    </div>
-            
-                    <p class="col-sm-12 fs-5 u text-center text-decoration-underline header-text"> Contact Information</p>
-                    <div>
-                        <div class="row gy-2 mb-4">
-                            <div class="col-6">
-                                <label for="FirstName" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="FirstName" placeholder="First name here...">
-                            </div>             
-                            <div class="col-6">
-                                <label for="LastName" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="LastName" placeholder="Last name here...">
-                            </div>    
-                        </div>
-                        <div class="row gy-2 mb-4">
-                            <div class="col-6">
-                                <label for="Email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="Email" placeholder="Email here...">
-                            </div>             
-                            <div class="col-6">
-                                <label for="Phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="LastName" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="613-822-1254">
-                            </div>                        
-                        </div>
-                    </div>
-                
-                    <p class="col-sm-12 fs-5 u text-center text-decoration-underline header-text"> Payment Information</p>
-                    <div>
-                        <div class="row gy-2 mb-4">
-                            <div class="col-12">
-                                <label for="credit-card" class="form-label">Credit Card Number</label>
-                                <input type="text" class="form-control" id="credit-card" title="This is only needed in case of last minute cancellation." placeholder="xxxx xxxx xxxx xxxx"> 
-                            </div>
-                        </div>
-                        <div>
-                            <p>Expiry Date</p>
-                        </div>
-                        <div class="row gy-2 mb-4  d-grid justify-content-center d-lg-flex justify-content-lg-start">
-                            <div class="col-12 col-lg-6">
-                                <label for="month">Month: </label>
-                                <select id="month">
-                                    <option value="1">January</option>
-                                    <option value="2">February</option>
-                                    <option value="3">March</option>
-                                    <option value="4">April</option>
-                                    <option value="5">May</option>
-                                    <option value="6">June</option>
-                                    <option value="7">July</option>
-                                    <option value="8">August</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                    <option value="12">December</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <label for="year">Year:  </label>
-                                <select id="year">
-                                    <option value="2021">2021</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2024">2024</option>
-                                    <option value="2025">2025</option>
-                                    <option value="2026">2026</option>
-                                    <option value="2027">2027</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-color col-12 rounded-3" id="form-submit"  type="submit">Submit</button>    
                 </form>
             </div>
         </div>

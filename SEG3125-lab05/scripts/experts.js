@@ -1,6 +1,6 @@
 services = {
-    Movement: "MovementR",
-    Aqua: "AquaT",
+    Movement: "Movement Rehab",
+    Aqua: "Aqua Therapy",
     Chiro: "Chiro",
     Acup: "Acpuncture",
     Massage: "Massage"

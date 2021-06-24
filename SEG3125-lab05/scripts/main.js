@@ -58,7 +58,7 @@ $(document).ready(function(){
 function showSpecialist(services_selected){
 
     //Need to reset the datepicker
-    $( "#datepicker" ).datepicker("option", "beforeShowDay", null);
+    //$( "#datepicker" ).datepicker("option", "beforeShowDay", null);
 
     for(let expert in expertInfo){ //Going through the experts, seeing if they have the same services as selected.
         let flag = true;
@@ -70,6 +70,8 @@ function showSpecialist(services_selected){
             if (temp_flag == false){
                 flag = false;
                 $("#"+expert).parent().hide();
+                $("#datepicker").val("");
+                $("#timepicker").val("");
             } 
         }
         if (flag == true){
@@ -83,9 +85,27 @@ function showSpecialist(services_selected){
 
 //Changing the time and date selection depending on the specialist selected.
 function specialistSchedule(){  
+    $("#datepicker").val("");
+    $("#timepicker").val("");
+    
     $( "#datepicker" ).datepicker("option", "beforeShowDay", availableDates);
-    availableTime();
+    
+    //Change the min day
+    let flag = true;
+    let date = new Date();
+    let counter = 0;
+    let min_day;
+    while(flag){
+        min_day = new Date(date.setDate(date.getDate() + counter));
+        //min_day = date.toISOString();
+        if(availableDates(min_day)[0] == true){
+            flag = false;
+            $( "#datepicker" ).datepicker("option", "minDate", counter);
+        }
+        counter++;
     }
+    availableTime();
+}
 
 
 function availableDates(day){

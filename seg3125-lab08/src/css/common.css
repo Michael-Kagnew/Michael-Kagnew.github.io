@@ -1,0 +1,88 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.test {
+    border: 1px solid red;
+}
+
+.testiomonials {
+  background-color: rgba(128, 128, 128, 0.137);
+}
+
+#home-carousel {
+    position: relative;
+    z-index: 0;
+}
+
+.motto {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+}
+
+.here {
+    align-items: center;
+}
+
+.carousel-inner img{
+    filter:contrast(40%);
+}
+
+.name{
+  margin-left: 10%;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 576px) {
+    .motto {
+       font-size: 30px;
+       font-weight: 700;
+
+     }
+   }
+ 
+@media screen and (min-width: 576px) {
+   .motto {
+      font-size: 40px;
+      font-weight: 700;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .motto {
+       font-size: 50px;
+       font-weight: 700;
+
+     }
+   }
+   
+   @media screen and (min-width: 992px) {
+    .motto {
+       font-size: 60px;
+       font-weight: bold;
+     }
+   }
+
+   @media screen and (min-width: 1200px) {
+    .motto {
+       font-size: 80px;
+       font-weight: bold;
+
+     }
+   }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px
+  @media screen and (max-width: 600px) {
+    .motto {
+      font-size: 40px;
+    }
+  } */

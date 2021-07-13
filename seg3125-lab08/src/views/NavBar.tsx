@@ -24,6 +24,9 @@ function NavBar() {
                     <li className="nav-item">
                     <a className="nav-link" href="/about">About Us</a>
                     </li>
+                    <li className="nav-item">
+                    <a className="btn-danger btn-sm mb-3 mt-3">REGISTER</a>            
+                    </li>
                     
                 </ul>
             </div>

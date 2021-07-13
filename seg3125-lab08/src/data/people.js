@@ -1,4 +1,8 @@
-import coach_tay from "../assets/images/coach_taylor.png";
+import coach_tay from "../assets/images/rsz_coach_taylor.png";
+import coach_nick from "../assets/images/coach_nick_rsz.jpg";
+import coach_damian from "../assets/images/coach_damian_rsz.jpg";
+import tay_vid from "../assets/videos/taylor_vid.mp4";
+
 
  export let user_testimonials = [
     {   name:"fred",
@@ -13,13 +17,22 @@ import coach_tay from "../assets/images/coach_taylor.png";
 ]
 
  export let experts = [{
-    taylor: {
-        name: "Taylor Allen",
-        portrait:  coach_tay
+        name: "Coach Taylor",
+        portrait:  coach_tay,
+        video: tay_vid,
+        id: 1
     },
-    Mike: {
-        name: "Taylor Allen",
-        portrait:  coach_tay
+     {
+        name: "Coach Nick",
+        portrait:  coach_nick,
+        video: tay_vid,
+        id: 2
     },
-
-}]
+    {
+        name:"Coach Damin",
+        portrait: coach_damian,
+        video: tay_vid,
+        id : 3
+    }
+    
+]

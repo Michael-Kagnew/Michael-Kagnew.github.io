@@ -40,9 +40,15 @@ body{
   margin-top:  20px;
 }
 
+.form-expert img {
+  width: 80%;
+  height: auto;
+}
 
 
-
+#form{
+  border: 2px solid black;
+}
 
 
 @media screen and (max-width: 576px) {

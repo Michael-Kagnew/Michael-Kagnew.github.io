@@ -1,9 +1,12 @@
 
 
-function Filter(){
+function Filter(props){
 
 return(
-    <div></div>
+    <div>
+        <p>Filter</p>
+        
+    </div>
 );
 }
 

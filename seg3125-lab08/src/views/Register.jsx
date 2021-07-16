@@ -4,7 +4,9 @@ import { useState } from "react";
 
 function Register(props){
 
-    const ref = useRef(null);
+    let displayLang = props.othrTxt[props.propLang]["register"];
+    let commonLang = props.othrTxt[props.propLang]["common"];
+
     const [email, setEmail] = useState("");
     const [lName, setLName] = useState("");
     const [FName, setFName] = useState("");
@@ -30,41 +32,41 @@ function Register(props){
     } 
 
     return(
-        <div id='form' className="p-4 container">
-            <p className="display-3 text-center ">Registration Form</p>
+        <div id='form' className="p-4 mt-5 container margin">
+            <p className="display-3 text-center ">{displayLang.title}</p>
             <form >
                 <div>
                     <p className="h1"></p>
                 </div>
                 <div className="row">
                     <div className="col-6 col-md-4 vert-spacing">
-                        <label className="form-label" htmlFor="FName">First Name:</label>
+                        <label className="form-label" htmlFor="FName">{displayLang.fName}</label>
                         <input type="text" className="form-control" id="FName"></input>
                     </div>
                     <div className="col-6 col-md-4 vert-spacing">
-                        <label className="form-label" htmlFor="LName">Last Name:</label>
+                        <label className="form-label" htmlFor="LName">{displayLang.lName}</label>
                         <input type="text" className="form-control" id="LName"></input>
                     </div>
                     <div className="col-6 col-md-4 vert-spacing">
-                        <label className="form-label" htmlFor="Email">Email address</label>
+                        <label className="form-label" htmlFor="Email">{displayLang.email}</label>
                         <input type="email" className="form-control" id="Email" onChange={(event) => setEmail(event.target.value)}></input>
                     </div>
                 </div>
                 <div>
-                    <p className="h4 text-decoration-underline vert-spacing">Optional: Package</p>
+                    <p className="h4 text-decoration-underline vert-spacing">{displayLang.package}</p>
                 </div>
                 <div className="row">
                     <div className="package form-check">
                         <input className="form-check-input" type="radio" name="package" id="beginner"/>
-                        <label className="form-check-label" htmlFor="beginner">Beginner</label>
+                        <label className="form-check-label" htmlFor="beginner">{commonLang.beginner}</label>
                     </div>
                     <div className="package form-check">
                         <input className="form-check-input" type="radio" name="package" id="intermediate"/>
-                        <label className="form-check-label" htmlFor="intermediate">Intermediate</label>
+                        <label className="form-check-label" htmlFor="intermediate">{commonLang.inter}</label>
                     </div>
                     <div className="package form-check">
                         <input className="form-check-input" type="radio" name="package" id="advanced"/>
-                        <label className="form-check-label" htmlFor="advanced">Advanced</label>
+                        <label className="form-check-label" htmlFor="advanced">{commonLang.advanced}</label>
                     </div>
                 </div>
                 
@@ -86,7 +88,7 @@ function Register(props){
                 
                 <div className="row mt-3 d-flex">
                     <div className="col-6">
-                        <label htmlFor="course-select">Court</label>
+                        <label htmlFor="course-select">{commonLang.course}</label>
                         <select class="form-select" aria-label="Default select example" id="course-select" title="Please select a court to practice on.">
                             {props.propCourts.map( elem => (
                                 <option value={elem.value} key={elem.key}>{elem.name}</option>
@@ -95,7 +97,7 @@ function Register(props){
                         </select>
                     </div>
                     <div className="col-6">
-                        <label htmlFor="court-select">Course</label>
+                        <label htmlFor="court-select">{commonLang.court}</label>
                         <select className="form-select" aria-label="Default select example" id="court-select" title="Please select a course to partake in">
                             {props.propCourses.map( elem => (
                                 <option value={elem.value} key={elem.key}>{elem.name}</option>
@@ -107,13 +109,13 @@ function Register(props){
 
                 <div className="row mt-3">
                     <div className="col">
-                        <label for="credit" class="form-label">Credit Card</label>
+                        <label for="credit" class="form-label">{displayLang.credit}</label>
                         <input type="text" class="form-control" id="credit-card" title="This is only needed in case of last minute cancellation." placeholder="xxxx xxxx xxxx xxxx"/> 
                     </div>
                 </div>
 
                 <div className="d-flex justify-content-center">
-                    <button className="btn-danger btn-lg  mt-3 " onClick={validateAllInputs}>SUBMIT</button>            
+                    <button className="btn-danger btn-lg  mt-3 " onClick={validateAllInputs}>{commonLang.submit}</button>            
                 </div>
             </form>
         </div>

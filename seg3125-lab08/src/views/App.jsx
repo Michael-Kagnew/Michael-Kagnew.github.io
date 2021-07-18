@@ -10,6 +10,9 @@ import Courts from './Courts';
 import { useState } from 'react';
 import { user_testimonials } from "../data/people";
 import { langauge_data } from '../data/language';
+import Course from './Course';
+import About from './About';
+import Experts from './Experts';
 
 function App() {
 
@@ -20,12 +23,12 @@ function App() {
   }
   
   return (      
-    <Router>
+    <div>
+      <Router>
       <div className="App">
-        {/* <div className="container-fluid">
-        </div> */}
+      <NavBar othrTxt = {langauge_data} propLangChange = {languageChange} propLang = {lang}/>
+
         <div className="content">
-          <NavBar othrTxt = {langauge_data} propLangChange = {languageChange} propLang = {lang}/>
           <Switch>
           <Route  exact path="/">
               <Home othrTxt={langauge_data} propTesti = {user_testimonials} propLang ={lang}/>
@@ -36,12 +39,21 @@ function App() {
           <Route path="/register">
             <Register othrTxt={langauge_data} propExperts = {experts} propCourts = {courts} propCourses={courses} propLang ={lang}/> 
           </Route>
-
+          <Route path="/courses">
+            <Course   othrTxt={langauge_data} propCourses = {courses} propLang = {lang}/>
+          </Route>
+          <Route path="/experts">
+            <Experts propExperts = {experts} othrTxt={langauge_data}  propLang = {lang}></Experts>
+          </Route>
           </Switch>
+          <Route path="/about">
+            <About othrTxt={langauge_data}  propLang = {lang}></About>
+          </Route>
         </div>
-        <Footer/>
       </div>
     </Router>
+    </div>
+    
   );
   
 }

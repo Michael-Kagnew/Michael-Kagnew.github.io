@@ -1,4 +1,10 @@
 import "../css/common.css";
+import logo from "../assets/images/logo_tr.png";
+import court_icon from "../assets/images/court.png";
+import course_icon from "../assets/images/course.png";
+import coach_icon from "../assets/images/coach.png";
+import about_icon from "../assets/images/about.png";
+import {Link} from "react-router-dom";
 function NavBar(props) {
 
     let commonLang = props.othrTxt[props.propLang]["common"];
@@ -12,28 +18,28 @@ function NavBar(props) {
                     <div className=" col-6 col-md-12 ">
                         <ul className="navbar-nav">
                             <li>
-                                <a className="navbar-brand" href="/">LOGO HERE</a>
+                                <Link to="/" className="navbar-brand"><img src={logo} width="70px"/></Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/courts">{commonLang.court}</a>
+                                <Link className="nav-link active" aria-current="page" to="/courts"><img src={court_icon}></img>{commonLang.court}</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/courses">{commonLang.course}</a>
+                                <Link className="nav-link" to="/courses"><img src={course_icon}></img>{commonLang.course}</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/experts">{commonLang.expert}</a>
+                                <Link className="nav-link" to="/experts"><img src={coach_icon}></img>{commonLang.expert}</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/about">{commonLang.about}</a>
+                                <Link className="nav-link" to="/about"><img src={about_icon}></img>{commonLang.about}</Link>
                             </li>
                             <li>
-                                <select className="form-select" aria-label="Langauge" onChange={(event) =>props.propLangChange(event)}>
+                                <select className="form-select mt-3" aria-label="Langauge" onChange={(event) =>props.propLangChange(event)}>
                                     <option value="english">English</option>
                                     <option value="french">Français</option>
                                 </select>
                             </li>
                             <li className="nav-item">
-                                <btn className="btn-danger btn" href="/register">{commonLang.reg_btn}</btn>
+                                <Link to="/register"><btn className="btn-danger btn mt-3 ">{commonLang.reg_btn}</btn></Link>
                             </li>
                         </ul>
                     </div>

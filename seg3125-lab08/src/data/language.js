@@ -15,6 +15,13 @@ export let langauge_data = {
             
         },
 
+        about: {
+            weDo: "What we do",
+            doDesc: "Our focus here at BasketballCo is to give you the opportunity to be the best version of yourself. We want to provide you with training that will enhance your game and take you to the next level, with training that is targeted in our one-on-one format. ",
+            goal: "To make you the best version of yourself.",
+            goalTtl: "The Goal"
+        },
+
         common:{
             reg_btn: "REGISTER",
             beginner: "Beginner",
@@ -26,7 +33,9 @@ export let langauge_data = {
             expert: "Experts",
             about: "Abous Us",
             show: "Show more info",
-            filter: "filter"
+            filter: "Filter",
+            interview: "Some free lessons from our coaches"
+
         }
     },
 
@@ -40,10 +49,17 @@ export let langauge_data = {
             title: "Formulaire d'inscription",
             fName: "Prénom",
             lName: "Surnom",
-            email: "adresse électronique",
-            package: "Facultatif : forfait",
+            email: "Adresse électronique",
+            package: "Facultatif: forfait",
             credit: "Carte de crédit"
             
+        },
+        about:{
+            weDo: "Ce que nous faisons",
+            doDesc: "Chez BasketballCo, notre objectif est de vous donner l'opportunité d'être la meilleure version de vous-même. Nous voulons vous fournir une formation qui améliorera votre jeu et vous fera passer au niveau supérieur, avec une formation ciblée dans notre format individuel.",
+            goal: "Pour faire de vous la meilleure version de vous-même.",
+            goalTtl: "Le But"
+             
         },
         common:{
             reg_btn: "S'INSCRIRE",
@@ -56,7 +72,8 @@ export let langauge_data = {
             expert: "Experts",
             about: "À Propos de Nous",
             show: "Afficher plus d'informations",
-            filter: "filtre"
+            filter: "Filtre",
+            interview: "Quelques cours gratuits de nos coachs"
 
         }
     },

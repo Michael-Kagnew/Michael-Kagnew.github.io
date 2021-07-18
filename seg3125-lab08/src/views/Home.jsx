@@ -10,10 +10,13 @@ function Home(props) {
     console.log(testiomonials);
     return (
         <div>
-            <p className="display-1 text-center company-name">BasketballCo</p>
-            <div className="row here">
-                <div className="motto d-flex align-items-center justify-content-center">
-                    <p className="">{display_lang.motto}</p><br />
+            <div className="row  here">
+                <div className="d-flex justify-content-center">
+                <p className="display-1 company-name " >BasketballCo</p>
+                </div>
+                <div className="motto  d-flex  justify-content-center">
+                        
+                    <p className="d-block">{display_lang.motto}</p>
                 </div>
                 <div id="home-carousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
@@ -30,7 +33,7 @@ function Home(props) {
                 </div>
             </div>
 
-            <div className="d-flex test justify-content-center">
+            <div className="d-flex  justify-content-center">
                 <button className="btn-danger btn-lg mb-3 mt-3 ">{common_info.reg_btn}</button>
             </div>
 
@@ -43,7 +46,7 @@ function Home(props) {
                                 <p className=" d-flex justify-content-start ">{elem.name}</p>
                             </div>
                             <div>
-                                <p className="fst-italic text-start">{elem.text}</p>
+                                <p className="fst-italic text-start ms-5">{elem.text}</p>
                             </div>
                         </div>
                     )

@@ -32,11 +32,13 @@ body{
 }
 
 .name{
-  margin-left: 10%;
+  margin-left: 2%;
 }
 
 .company-name{
   font-weight: bold;
+  position: absolute;
+  z-index: 1;
 }
 
 
@@ -58,7 +60,7 @@ body{
 
 @media screen and (max-width: 576px) {
     .motto {
-       font-size: 30px;
+       font-size: 20px;
        font-weight: 700;
 
      }
@@ -68,14 +70,14 @@ body{
  
 @media screen and (min-width: 576px) {
    .motto {
-      font-size: 40px;
+      font-size: 30px;
       font-weight: 700;
     }
   }
 
   @media screen and (min-width: 768px) {
     .motto {
-       font-size: 50px;
+       font-size: 40px;
        font-weight: 700;
 
      }
@@ -83,14 +85,14 @@ body{
    
    @media screen and (min-width: 992px) {
     .motto {
-       font-size: 60px;
+       font-size: 50px;
        font-weight: bold;
      }
    }
 
    @media screen and (min-width: 1200px) {
     .motto {
-       font-size: 80px;
+       font-size: 60px;
        font-weight: bold;
 
      }

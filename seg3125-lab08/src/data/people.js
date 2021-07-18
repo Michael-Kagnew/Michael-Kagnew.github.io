@@ -9,7 +9,7 @@ import nick_vid from "../assets/videos/nick_vid.mp4";
 export let user_testimonials =
 {
     english: [{
-        name: "fred",
+        name: "Fred",
         text: "I've gained the most amount of skill in ball handling and shooting that I ever have. Nowhere could I find a program that can fit all my needs. Thank you so much BasketballCo for your training regiment!",
         id: 1
     },

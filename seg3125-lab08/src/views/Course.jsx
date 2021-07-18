@@ -30,7 +30,7 @@ function Course(props){
             if(skill == ""){
                 return elem;
             } else {
-                return elem.skill["english"] == skill;
+                return elem.skill[props.propLang] == skill;
             }
             }
         )

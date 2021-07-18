@@ -1,6 +1,7 @@
 import "../css/common.css";
 import shooting from "../assets/images/shooting.jpg";
 import coaching from "../assets/images/coaching2.jpg";
+import {Link } from "react-router-dom";
 
 function Home(props) {
     let testiomonials = props.propTesti[props.propLang];
@@ -34,7 +35,7 @@ function Home(props) {
             </div>
 
             <div className="d-flex  justify-content-center">
-                <button className="btn-danger btn-lg mb-3 mt-3 ">{common_info.reg_btn}</button>
+                <Link to="/register"><button className="btn-danger btn-lg mb-3 mt-3 ">{common_info.reg_btn}</button></Link>
             </div>
 
             <p className="display-1 mt-5 text-center">{display_lang.testimonial}</p>

@@ -47,11 +47,11 @@ function Courts(props) {
             if(rimType== "" && location == ""){
                 return elem;}
             else if (rimType == "") {
-                return elem.location["english"] == location;
+                return elem.location[props.propLang] == location 
             } else if (location == "") {
-                return elem.rim["english"] == rimType;
+                return elem.rim[props.propLang] == rimType;
             } else {
-                return elem.rim["english"] == rimType && elem.location["english"] == location
+                return elem.rim[props.propLang] == rimType && elem.location[props.propLang] == location
             }
             }
         )
